@@ -10,13 +10,13 @@ const BlogPost = ({ data }) => {
       <div className="blogpost">
         <h1>{title}</h1>
         <img alt={title} src={image.file.url} />
-        <div className="tags">
+        {/* <div className="tags">
           {tags.map(tag => (
             <span className="tag" key={tag}>
               {tag}
             </span>
           ))}
-        </div>
+        </div> */}
         <p className="body-text">{body.body}</p>
         <Link to="/blogposts">View more posts</Link>
         <Link to="/">Back to Home</Link>
@@ -38,7 +38,7 @@ export const pageQuery = graphql`
           url
         }
       }
-      tags
+      
     }
   }
 `;
