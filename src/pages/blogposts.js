@@ -32,6 +32,9 @@ export const query = graphql`
           body {
             body
           }
+          richBody{
+            richBody
+          }
           image {
             file {
               url
