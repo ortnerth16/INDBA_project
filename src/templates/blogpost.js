@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 const BlogPost = ({ data }) => {
-  const { title, body, image, //tags
+  const { title, body, image, richBody//tags
      } = data.contentfulBlogPost;
   return (
     <Layout>
@@ -19,6 +19,7 @@ const BlogPost = ({ data }) => {
           ))}
         </div> */}
         <p className="body-text">{body.body}</p>
+      <p className="body-text">{richBody.body}</p>
         <Link to="/blogposts">View more posts</Link>
         <Link to="/">Back to Home</Link>
       </div>
